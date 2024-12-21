@@ -30,18 +30,42 @@
 <!--  </div>-->
 <!--  <div>111</div>-->
   <div class="container">
-    <img class="image" src="../images/01.png" alt="Image 1">
-    <img class="image" src="../images/01_1.png" alt="Image 2">
-    <img class="image" src="../images/02.png" alt="Image 3">
-    <img class="image" src="../images/02_2.png" alt="Image 4">
-    <img class="image" src="../images/03.png" alt="Image 5">
-    <img class="image" src="../images/03_3.png" alt="Image 6">
-    <img class="image" src="../images/04.png" alt="Image 7">
-    <img class="image" src="../images/04_4.png" alt="Image 8">
+    <div>
+      <img class="image" src="../images/01.png" alt="Image 1">
+    </div>
+    <div>
+      <img class="image" src="../images/01_1.png" alt="Image 2">
+    </div>
+    <div>
+      <img class="image" src="../images/02.png" alt="Image 3">
+    </div>
+    <div>
+      <img class="image" src="../images/02_2.png" alt="Image 4">
+    </div>
+    <div>
+      <img class="image" src="../images/03.png" alt="Image 5">
+    </div>
+    <div>
+      <img class="image" src="../images/03_3.png" alt="Image 6">
+    </div>
+    <div>
+      <img class="image" src="../images/04.png" alt="Image 7">
+    </div>
+    <div>
+     <img class="image" src="../images/04_4.png" alt="Image 8">
+    </div>
+    <div>
     <img class="image" src="../images/05.png" alt="Image 9">
-    <img class="image" src="../images/05_5.png" alt="Image 10">
-    <img class="image" src="../images/06.png" alt="Image 11">
-    <img class="image" src="../images/06_6.png" alt="Image 12">
+    </div>
+    <div>
+      <img class="image" src="../images/05_5.png" alt="Image 10">
+    </div>
+    <div>
+      <img class="image" src="../images/06.png" alt="Image 11">
+    </div>
+    <div>
+      <img class="image" src="../images/06_6.png" style="margin-bottom: 0" alt="Image 12">
+    </div>
   </div>
 </template>
 
@@ -84,10 +108,19 @@ li {
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  height: 100vh;
 }
-.image {
+.container>div {
   width: 30%;
   margin-bottom: 20px;
+  height: 18%;
+  margin-right: 10px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
 }
 </style>
