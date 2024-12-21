@@ -30,11 +30,11 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: rgba(239,228,176,.5)
+    background-color: rgba(239,228,176,.5);
   }
   .card {
     margin: 10px;
-    /* width: 25%; */
+    width: 18%;
   }
   
   .card-inner {
@@ -44,7 +44,6 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
     border: 1px solid #ebebeb;
-    background-color: #ebebeb;
   }
   
   .card-inner.flipped {
@@ -56,16 +55,18 @@
   }
   
   .card-front {
-    color: white;
+    width: 100%;
+    height: 100%;
   }
   
   .card-back {
-    color: white;
+    width: 100%;
+    height: 100%;
     transform: rotateY(180deg);
   }
     img {
-        width: 160px;
-        height: 160px;
+    width: 100%;
+    height: 100%;
         object-fit: cover;
     }
   </style>

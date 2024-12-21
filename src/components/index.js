@@ -12,13 +12,12 @@ const myMixin = {
       img1,img2,img3,img4,img5,img6,bgImg,
       cards: [],
       flippedCards: [], // 用于记录已经翻转的卡片
-      flipperIds: [], // 用于记录已经翻转的卡片的 ID
     };
   },
   methods: {
     initializeCards() {
-      const cardTypes = 6;
-      const cardCount = 12;
+      const cardTypes = 5;
+      const cardCount = 10;
       const cardsPerType = cardCount / cardTypes;
       const cardImages = [img1,img2,img3,img4,img5,img6];
       let cards = [];
@@ -48,13 +47,11 @@ const myMixin = {
           this.cards[index].isFlipped = !this.cards[index].isFlipped;
           if (this.cards[index].isFlipped) {
             this.flippedCards.push(index);
-            this.flipperIds = item.id;
           } else {
             this.flippedCards.splice(this.flippedCards.indexOf(index), 1);
           }
         } else if (!this.cards[index].isFlipped) {
           const firstFlippedIndex = this.flippedCards.shift();
-          console.log('id', this.flipperIds)
           if (this.cards[firstFlippedIndex].id === item.id) {
             this.cards[firstFlippedIndex].show = false;
             this.cards[index].show = false;
